@@ -1,9 +1,14 @@
+
 body {
     background: #1a1a1a;
     color: #eee;
     font-family: sans-serif;
-    padding: 2rem;
     text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0
+
   }
   
   h1 {
@@ -34,16 +39,20 @@ body {
     flex-wrap: wrap;
     gap: 2rem;
   }
-  
+
   .tree-wrapper {
-    position: relative;
-    width: 600px;
-    height: 500px;
-    margin: 0 auto;
-    border: 1px solid #333;
+    border: 2px solid #333;
     border-radius: 12px;
     background-color: #2c2c2c;
-    padding: 1rem;
+    display: grid;
+    flex: 1 1 auto;
+    margin: 2.5rem;
+
+    grid-template-columns: 9;
+    grid-template-rows: 6;
+
+    /* justify-items: center; */
+
   }
   
   .skill {
@@ -52,7 +61,6 @@ body {
     border-radius: 50%;
     background-color: #3c3c3c;
     border: 2px solid #555;
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
