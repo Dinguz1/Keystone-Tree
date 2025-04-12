@@ -69,6 +69,8 @@ body {
     font-size: 0.8rem;
     box-sizing: border-box;
     cursor: pointer;
+    z-index: 100;
+    position: relative;
   }
   
   .skill:hover {
