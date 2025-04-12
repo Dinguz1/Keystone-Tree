@@ -58,10 +58,8 @@ body {
     justify-content: center;
     text-align: center;
     font-size: 0.8rem;
-    padding: 0.5rem;
     box-sizing: border-box;
     cursor: pointer;
-    transition: background 0.2s ease;
   }
   
   .skill:hover {
