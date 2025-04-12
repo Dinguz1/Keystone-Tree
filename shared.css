@@ -48,10 +48,11 @@ body {
     flex: 1 1 auto;
     margin: 2.5rem;
 
-    grid-template-columns: 9;
-    grid-template-rows: 6;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
 
-    /* justify-items: center; */
+    justify-items: center;
+    align-items: center;
 
   }
   
