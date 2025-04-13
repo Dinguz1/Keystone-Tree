@@ -1,10 +1,10 @@
 'use client'
 
 type Props = {
-    skills: React.HtmlHTMLAttributes<HTMLElement>
+
 }
 
-export default function TreeWrapper({ skills }: Props) {
+export default function TreeWrapper({ }: Props) {
     return (
         <div
             style={{
