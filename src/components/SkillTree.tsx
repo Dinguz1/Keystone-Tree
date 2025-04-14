@@ -19,9 +19,9 @@ export default function SkillTree(skills: SkillTreeProps ) {
             border: '5px solid black',
             backgroundColor: '#171717',
             marginBottom: '200px'}}>
-            
-            
 
+                {skills.skills}
+            
         </div>
     );
 }
