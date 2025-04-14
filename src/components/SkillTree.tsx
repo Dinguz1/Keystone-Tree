@@ -1,12 +1,11 @@
 // 'use client' <-  why was this here? doesn't seem to be needed
+import Skill from "@/components/Skill";
+import React from "react";
 
-    interface SkillProps {
-        name: string;
-        description: string;
-    }
+interface SkillTreeProps {skills: React.ReactElement[]}
 
-    // export default function SkillTree({ name, description }: { name: SkillProps; description: SkillProps }) {
-    export default function SkillTree() {
+
+export default function SkillTree(skills: SkillTreeProps ) {
 
     return (
         <div 
@@ -19,21 +18,10 @@
             boxSizing: 'border-box',
             border: '5px solid black',
             backgroundColor: '#171717',
-            marginBottom: '200px'}}
-        >{
-            <>  
-                {/* this is not elegant, maybe make skill into a component? */}
-                <div className="skill" id="skr" style={{ gridColumn: 1, gridRow: 1 }}>
+            marginBottom: '200px'}}>
+            
+            
 
-                    {/* {name.name} */}
-                        Skill 
-                    <div className = 'tooltip'> 
-                        {/* {description.description} */}
-                        Description
-                    </div>
-                </div>
-            </>
-
-        }</div>
+        </div>
     );
 }
