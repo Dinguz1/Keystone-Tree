@@ -1,5 +1,4 @@
 // 'use client' <-  why was this here? doesn't seem to be needed
-import Skill from "@/components/Skill";
 import React from "react";
 
 interface SkillTreeProps {skills: React.ReactElement[]}
