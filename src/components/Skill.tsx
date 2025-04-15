@@ -5,7 +5,7 @@ export default function Skill({ name, description, gridColumnIn, gridRowIn}: Ski
 
     return (
         <div>
-            <div className = "skill" style = {{ gridColumn: gridColumnIn, gridRow: gridRowIn }}> {name} 
+            <div className = "skill" style = {{ gridColumn: gridColumnIn, gridRow: gridRowIn }} id={name}> {name} 
                 <div className = "tooltip"> {description} </div>
             </div>
 
