@@ -8,7 +8,10 @@ export default function SkillNode ({ data }: NodeProps) {
                 position={Position.Top} 
                 style={{ opacity: 0, visibility: 'hidden' }} 
             />
-            <div className="skill">{data.label as string}</div>
+            <div className="skill">
+                {data.label as string} 
+                <div className="tooltip">{data.toolTip as string}</div>
+            </div>
             <Handle 
                 type="source"  
                 position={Position.Bottom} 
