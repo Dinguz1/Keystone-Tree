@@ -13,7 +13,7 @@ const MindContent = () => {
         { 
             id: '1', 
             position: { x: 0, y: 0 }, 
-            data: { label: 'Skill 1' }, 
+            data: { label: 'Skill 1', toolTip: 'test' }, 
             type: 'skillNode',
         },
         { 
