@@ -2,12 +2,12 @@
 
 'use client'
 import Button from "@/components/Button"; 
-import auth from "@/auth"
+import auth from "@/Auth"
 
 export default function Home() {
 
 
-  if (auth()){
+  if (Auth()){
     return(
       <div>
         <form action= "/"> <input

@@ -2,7 +2,7 @@
 import { useSearchParams } from 'next/navigation'
 
 
-export default function auth(){
+export default function Auth(){
 
     const searchParams = useSearchParams();
     const password = searchParams.get('Password');
