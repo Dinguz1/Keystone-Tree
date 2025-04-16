@@ -8,7 +8,7 @@ export default function auth(){
     const searchParams = useSearchParams();
     const password = searchParams.get('Password');
 
-    var isAuth = ('Test' === password);
+    var isAuth = ('NGGT1597' === password);
     if (!isAuth){
         return true
     }else{
