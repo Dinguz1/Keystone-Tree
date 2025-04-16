@@ -1,30 +1,31 @@
 // The ID functionality is in no way secure, its like negative secure, but it works for now identify who is using the page
 
 'use client'
-import Button from "@/components/Button"; 
+import Auth from "@/app/Auth";
+import MainNavBar from "@/components/MainNavBar";
+import LogIn from "./LogIn";
 
 export default function Home() {
+
+  
+  if (Auth() == -1){
+    return (LogIn());
+  }else{
     return (
-      <main className = "demo-body">
-
-        <Button text="Home" href="/" />
-        <Button text="Rules" href="/Rules" />
-        <Button text="Lore" href="/lore" />
-        <Button text="Skill Trees" href="/Skill-Tree" />
-
+      <div>
+        <main className = "body">
+        {MainNavBar()}
         <h1 className="text-gradient">Keystone Home Page</h1>
-
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et erat vitae risus consectetur porta ac sed quam. Etiam ultrices mattis augue interdum finibus. 
-        Mauris non consectetur massa. Etiam molestie ex non massa facilisis maximus vel in augue. In fermentum elit felis, a auctor felis vehicula id. Vivamus eu sem 
-        ut tortor tristique gravida non sed nisi. Donec iaculis libero risus, faucibus mattis augue sagittis ut. Morbi iaculis, nisl in imperdiet convallis, erat justo 
-        ornare turpis, in bibendum magna ante non enim. Nunc quis volutpat dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-        Donec feugiat nisl ex, id tempus nibh accumsan vehicula. Aliquam in cursus erat, eu rutrum neque. Curabitur quis velit ac mauris iaculis iaculis quis aliquam 
-        erat.Suspendisse potenti. Duis rutrum blandit commodo. Nulla facilisi. Fusce consectetur elit sit amet odio pretium semper. Fusce mollis mauris leo, ut euismod 
-        justo pharetra et. Ut tincidunt justo elit, at commodo lorem lobortis eget. In vel placerat mauris, vel semper tortor. Integer ac augue et felis ullamcorper 
-        ultrices.Praesent vel justo odio. Quisque at dolor vel massa  
+        {"Keystone is a TTRPG system in which stories are told. These stories are a collaboration between the Game Master (GM) and players." +
+        "The GM presents a world in which the players tell their story. This includes providing locations, adventure hooks, and Non-Player " +
+        "Characters (NPCs) that the players can engage with. The Keystone system facilitates stories that ride on a knife's edge, with fast" +
+         "paced and punishing combat, as well as significant consequences for poor decisions but a plethora of options and abilities both in "+
+         "and out of combat to triumph over obstacles. At any moment, disaster may strike or victory may be snatched from the jaws of defeat. " }
         </p>
-      </main>
+        </main>
+      </div>
     );
+  }
 }
 

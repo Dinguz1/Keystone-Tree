@@ -15,6 +15,7 @@ export default function HomeButton({ text, href }: ButtonProps) {
       {text}
       </button>
     </Link>
+    
   )
 }
 
