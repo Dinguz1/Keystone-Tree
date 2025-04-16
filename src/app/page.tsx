@@ -1,4 +1,4 @@
-// The Password functionality is in no way secure, its like negative secure, but it works for now to pw protect the page
+// The ID functionality is in no way secure, its like negative secure, but it works for now identify who is using the page
 
 'use client'
 import Button from "@/components/Button"; 
@@ -8,30 +8,36 @@ export default function Home() {
 
 
   if (!Auth()){
-    return(
-      <div>
-        <form action= "/"> <input
+    return (
 
-          name = "Player-ID"
-          placeholder = "Player ID"
-          className="boarder boarder-grey-400 rounded text-xl pl-2 m-10"
-        ></input></form>
+      <div className="flex flex-col items-center justify-center min-h-screen mb 4">
+        <h1 className="mb-4" >Enter Player ID</h1>
+        <form action="/">
+          <input
+            name="Player-ID"
+            placeholder="Player ID"
+            className="mb-4"
+          />
+        </form>
       </div>
-    )
+
+    );
 
   }else{
 
     return (
-      <main>
+      <div>
+
+        <main className = "demo-body">
 
         <Button text="Home" href="/" />
         <Button text="Rules" href="/Rules" />
         <Button text="Lore" href="/lore" />
         <Button text="Skill Trees" href="/Skill-Tree" />
-        
-        <h1><u>Project Keystone Home</u></h1>
 
-        <body>
+        <h1 className="text-gradient">Keystone Home Page</h1>
+
+        <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et erat vitae risus consectetur porta ac sed quam. Etiam ultrices mattis augue interdum finibus. 
         Mauris non consectetur massa. Etiam molestie ex non massa facilisis maximus vel in augue. In fermentum elit felis, a auctor felis vehicula id. Vivamus eu sem 
         ut tortor tristique gravida non sed nisi. Donec iaculis libero risus, faucibus mattis augue sagittis ut. Morbi iaculis, nisl in imperdiet convallis, erat justo 
@@ -40,8 +46,10 @@ export default function Home() {
         erat.Suspendisse potenti. Duis rutrum blandit commodo. Nulla facilisi. Fusce consectetur elit sit amet odio pretium semper. Fusce mollis mauris leo, ut euismod 
         justo pharetra et. Ut tincidunt justo elit, at commodo lorem lobortis eget. In vel placerat mauris, vel semper tortor. Integer ac augue et felis ullamcorper 
         ultrices.Praesent vel justo odio. Quisque at dolor vel massa  
-        </body>
-      </main>
+        </p>
+        </main>
+      </div>
+
     );
 
   }

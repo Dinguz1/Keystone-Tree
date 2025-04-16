@@ -10,10 +10,10 @@ interface ButtonProps {
 export default function HomeButton({ text, href }: ButtonProps) {
   const searchParams = useSearchParams();
   return (
-    <Link 
-      href={href + "?Player-ID=" + searchParams.get('Player-ID')}
-      className="p-10 border border-white rounded-md text-center inline-block">
+    <Link href={href + "?Player-ID=" + searchParams.get('Player-ID')}>
+      <button type ="button">
       {text}
+      </button>
     </Link>
   )
 }
