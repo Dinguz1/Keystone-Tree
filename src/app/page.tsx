@@ -2,7 +2,6 @@
 
 'use client'
 import Button from "@/components/Button"; 
-import { useSearchParams } from 'next/navigation'
 import auth from "@/auth"
 
 export default function Home() {
