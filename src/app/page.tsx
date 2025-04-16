@@ -1,42 +1,21 @@
 // The ID functionality is in no way secure, its like negative secure, but it works for now identify who is using the page
 
 'use client'
-import Button from "@/components/Button"; 
 import Auth from "@/app/Auth";
+import MainNavBar from "@/components/MainNavBar";
+import LogIn from "./LogIn";
 
 export default function Home() {
 
 
-  if (!Auth()){
-    return (
-
-      <div className="flex flex-col items-center justify-center min-h-screen mb 4">
-        <h1 className="mb-4" >Enter Player ID</h1>
-        <form action="/">
-          <input
-            name="Player-ID"
-            placeholder="Player ID"
-            className="mb-4"
-          />
-        </form>
-      </div>
-
-    );
-
+  if (Auth() == -1){
+    return (LogIn());
   }else{
-
     return (
       <div>
-
-        <main className = "demo-body">
-
-        <Button text="Home" href="/" />
-        <Button text="Rules" href="/Rules" />
-        <Button text="Lore" href="/lore" />
-        <Button text="Skill Trees" href="/Skill-Tree" />
-
+        <main className = "body">
+        {MainNavBar()}
         <h1 className="text-gradient">Keystone Home Page</h1>
-
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et erat vitae risus consectetur porta ac sed quam. Etiam ultrices mattis augue interdum finibus. 
         Mauris non consectetur massa. Etiam molestie ex non massa facilisis maximus vel in augue. In fermentum elit felis, a auctor felis vehicula id. Vivamus eu sem 
@@ -49,9 +28,7 @@ export default function Home() {
         </p>
         </main>
       </div>
-
     );
-
   }
 }
 
