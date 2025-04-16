@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-/* Pallet 
-#2C2C2C jet
-#E6FAFC Azure (web)
-#FF3E41 Imperial Red
-#8A4FFF medium slate purple
-#7C8483 battleship grey
-*/
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -26,8 +18,8 @@
     --foreground: #ededed;
   }
 }
-
-body {
+/* for long text paragraphs */
+body {  
   background: #2C2C2C;
   color: #eee;
   font-family: sans-serif;
@@ -38,26 +30,19 @@ body {
   margin: 0
 }
 
+/* headers */
 h1 {
   color: #FF3E41;
   font-size: 40px;
   margin: 40px;
 }
 
-p {
-  color: #E6FAFC;
-  font-size: 20px;
-  margin: 20px;
-  font-weight: 300;
-  line-height: 1.5;
-  margin: 40px;
-}
-
+/* used as highlight text, usually apopanied by a tooltip */
 a {
   color: #8A4FFF;
   text-decoration: none;
-  margin: 1rem;
-  font-size: 1.2rem;
+  font-family: sans-serif;
+  text-align: center;
 }
 
 a:hover {
@@ -69,29 +54,7 @@ a:hover {
   font-size: 1.25em;
 }
 
-.tree-selector {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.tree-wrapper {
-  border: 2px solid #333;
-  border-radius: 12px;
-  background-color: #2c2c2c;
-  display: grid;
-  flex: 1 1 auto;
-  margin: 2.5rem;
-
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-
-  justify-items: center;
-  align-items: center;
-
-}
-
+/* circualr node for used in skill trees */
 .skill {
   width: 80px;
   height: 80px;
