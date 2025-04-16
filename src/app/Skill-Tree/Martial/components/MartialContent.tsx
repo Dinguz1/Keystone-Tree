@@ -1,5 +1,4 @@
 'use client'
-import MainNavBar from '@/components/MainNavBar';
 import SkillNode from '@/components/SkillNode';
 import { ReactFlow, Node, Edge } from '@xyflow/react'
 
