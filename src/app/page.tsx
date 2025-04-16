@@ -7,27 +7,30 @@ import Auth from "@/app/Auth";
 export default function Home() {
 
 
-  if (Auth()){
+  if (!Auth()){
     return(
       <div>
         <form action= "/"> <input
 
-          name = "Player-Id"
-          placeholder = "Player Id"
+          name = "Player-ID"
+          placeholder = "Player ID"
           className="boarder boarder-grey-400 rounded text-xl pl-2 m-10"
         ></input></form>
       </div>
     )
+
   }else{
+
     return (
       <main>
+
         <Button text="Home" href="/" />
         <Button text="Rules" href="/rules" />
         <Button text="Lore" href="/lore" />
         <Button text="Skill Trees" href="/Skill-Tree" />
-  
+        
         <h1><u>Project Keystone Home</u></h1>
-  
+
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et erat vitae risus consectetur porta ac sed quam. Etiam ultrices mattis augue interdum finibus. 
         Mauris non consectetur massa. Etiam molestie ex non massa facilisis maximus vel in augue. In fermentum elit felis, a auctor felis vehicula id. Vivamus eu sem 
@@ -38,9 +41,9 @@ export default function Home() {
         justo pharetra et. Ut tincidunt justo elit, at commodo lorem lobortis eget. In vel placerat mauris, vel semper tortor. Integer ac augue et felis ullamcorper 
         ultrices.Praesent vel justo odio. Quisque at dolor vel massa  
         </p>
-      
       </main>
     );
+
   }
 }
 
