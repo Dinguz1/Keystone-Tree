@@ -6,8 +6,9 @@ export default function SkillTreePage() {
     return (
         <main> 
             {MainNavBar()}
-            <h1><u>Skill tree selection page</u></h1>
-            <div className="flex items-center justify-center">
+
+            <h1 className="text-gradient">Skill tree selection page</h1>
+            <div className="flex flex-col items-center min-h-screen">
 
                 <Button text="Martial" href="Skill-Tree/Martial"/>
                 <Button text="Mind" href="Skill-Tree/Mind"/>

@@ -7,7 +7,7 @@ import LogIn from "./LogIn";
 
 export default function Home() {
 
-
+  
   if (Auth() == -1){
     return (LogIn());
   }else{
