@@ -271,6 +271,7 @@ h6 {
 }
 
 p {
+    text-indent: 60px;
     display: block;
     width: fit-content;
 }
