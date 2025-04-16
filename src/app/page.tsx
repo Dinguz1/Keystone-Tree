@@ -1,24 +1,28 @@
+// The Password functionality is in no way secure, its like negative secure, but it works for now to pw protect the page \
+
+
 'use client'
 import Button from "@/components/Button"; 
+import { useSearchParams } from 'next/navigation'
 
 
 export default function Home() {
 
-  localStorage.setItem('isAuth', 'false')
+  const searchParams = useSearchParams();
+  var isAuth = (searchParams.get('Password') === 'Test');
 
-  function login(){
-    localStorage.setItem('isAuth', 'true')
-  }
-
-  if (localStorage.getItem('isAuth')?.startsWith('false')){
+  if (!isAuth){
     return(
       <div>
-        <button onClick={login}>
-          <h1><u></u>Login</h1>
-        </button>
+        <form action= "/"> <input
+
+          name = "Password"
+          placeholder = "Password"
+          className="boarder boarder-grey-400 rounded text-xl pl-2 m-10"
+        ></input></form>
       </div>
     )
-  }else if (localStorage.getItem('isAuth')?.startsWith('true')){
+  }else{
     return (
       <main>
         <Button text="Home" href="/" />
@@ -41,11 +45,6 @@ export default function Home() {
       
       </main>
     );
-  }else{
-    return(
-      <h1>
-        You should not be seeing this, please hard reload the page (ctr + shift + r), if the issue persists please inform me 
-      </h1>
-    )
   }
 }
+
