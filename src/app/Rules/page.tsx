@@ -1,16 +1,12 @@
-import MainNavBar from "@/components/MainNavBar";
-import {Tooltip} from "@heroui/tooltip";
+'use client'
+import Auth from "@/app/Auth";
+import LogIn from "../LogIn";
+import BaseRules from "@/Basic Content/BaseRules";
 
 export default function Rules() {
-    return (
-        <div>
-            {MainNavBar()}
-            <h1>Rules</h1>
-            <p>{"This is a test of the Rules page. If there is something mentioned that was not mentioned before or is very important, it should look like "}
-            <Tooltip content="I am an example tooltip"><a>This</a></Tooltip>
-            {" so that players can get more information"} 
-            </p>
-            
-        </div>
-    )
+    if (Auth() == -1){
+        return LogIn()
+    } else{
+        return BaseRules()
+    }
 }

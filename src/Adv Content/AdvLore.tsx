@@ -12,7 +12,7 @@ export default function AdvLore() {
             "will have short blurbs attached to them, these should look like "}
             <Tooltip content="I am an example tooltip"><a>This</a></Tooltip>
             {" so that players can get more information. On subpages of the Lore page, some Player IDs will have" +
-            "access too the more advanced Lore pages, like if it is lore from their home town."} 
+            "access to the more advanced Lore pages, like if it is lore from their home town."} 
             </p>
             
         </div>
