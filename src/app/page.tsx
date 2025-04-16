@@ -2,7 +2,7 @@
 
 'use client'
 import Button from "@/components/Button"; 
-import auth from "@/Auth"
+import Auth from "@/Auth"
 
 export default function Home() {
 
