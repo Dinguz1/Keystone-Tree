@@ -12,8 +12,8 @@ export default function Home() {
       <div>
         <form action= "/"> <input
 
-          name = "Password"
-          placeholder = "Password"
+          name = "Player-Id"
+          placeholder = "Player Id"
           className="boarder boarder-grey-400 rounded text-xl pl-2 m-10"
         ></input></form>
       </div>
