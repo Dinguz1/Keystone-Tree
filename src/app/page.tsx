@@ -2,33 +2,10 @@
 
 'use client'
 import Button from "@/components/Button"; 
-import Auth from "@/app/Auth";
 
 export default function Home() {
-
-
-  if (!Auth()){
     return (
-
-      <div className="flex flex-col items-center justify-center min-h-screen mb 4">
-        <h1 className="mb-4" >Enter Player ID</h1>
-        <form action="/">
-          <input
-            name="Player-ID"
-            placeholder="Player ID"
-            className="mb-4"
-          />
-        </form>
-      </div>
-
-    );
-
-  }else{
-
-    return (
-      <div>
-
-        <main className = "demo-body">
+      <main className = "demo-body">
 
         <Button text="Home" href="/" />
         <Button text="Rules" href="/Rules" />
@@ -47,11 +24,7 @@ export default function Home() {
         justo pharetra et. Ut tincidunt justo elit, at commodo lorem lobortis eget. In vel placerat mauris, vel semper tortor. Integer ac augue et felis ullamcorper 
         ultrices.Praesent vel justo odio. Quisque at dolor vel massa  
         </p>
-        </main>
-      </div>
-
+      </main>
     );
-
-  }
 }
 
