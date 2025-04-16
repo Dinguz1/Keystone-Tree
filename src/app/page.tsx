@@ -1,17 +1,14 @@
-// The Password functionality is in no way secure, its like negative secure, but it works for now to pw protect the page \
-
+// The Password functionality is in no way secure, its like negative secure, but it works for now to pw protect the page
 
 'use client'
 import Button from "@/components/Button"; 
 import { useSearchParams } from 'next/navigation'
-
+import auth from "@/auth"
 
 export default function Home() {
 
-  const searchParams = useSearchParams();
-  var isAuth = (searchParams.get('Password') === 'Test');
 
-  if (!isAuth){
+  if (auth()){
     return(
       <div>
         <form action= "/"> <input
