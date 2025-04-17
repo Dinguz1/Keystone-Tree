@@ -1,7 +1,11 @@
+'use client'
 import Button from "@/components/Button"; 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function MainNavBar() {
+  const pathname = usePathname();
+  if (pathname !== "/Auth"){
     return(
         <div className="flex items-center justify-center">
         <Button text="Home" href="/"/>
@@ -14,4 +18,5 @@ export default function MainNavBar() {
         <Link href= "/"> <button type ="button"> Logout</button> </Link>
       </div>
     )
+  }
 }
