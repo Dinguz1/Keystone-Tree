@@ -8,7 +8,7 @@ export default function MainNavBar() {
         <Button text="Rules" href="/Rules"/>
         <Button text="Lore" href="/Lore"/>
         <Button text="Skill Trees" href="/Skill-Tree"/>
-        <Button text="Character Sheet" href="//DeadEndPage"/>
+        <Button text="Character Sheet" href="/DeadEndPage"/>
         <Button text="Items" href="/DeadEndPage"/>
         <Button text="Spells" href="/DeadEndPage"/>
         <Link href= "/"> <button type ="button"> Logout</button> </Link>
