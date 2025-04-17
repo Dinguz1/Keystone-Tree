@@ -842,3 +842,15 @@ details[open] summary {
 .skill:hover .tooltip {
   display: block;
 }
+
+.dark-box {
+    background-color: #0a0a23; /* very dark blue, almost black */
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+  }

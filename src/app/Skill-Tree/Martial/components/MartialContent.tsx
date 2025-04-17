@@ -58,14 +58,17 @@ const MartialContent = () => {
     ]
     
     return (
-        <div className='h-screen w-screen max-h-screen flex items-center justify-center'>
-            <ReactFlow 
-                nodes={skills} 
-                edges={initialEdges} 
-                nodeTypes={nodeTypes}
-                fitView={true}
-            />
+        <div className="dark-box">
+            <div className='h-screen w-screen max-h-screen flex items-center justify-center'>
+                <ReactFlow 
+                    nodes={skills} 
+                    edges={initialEdges} 
+                    nodeTypes={nodeTypes}
+                    fitView={true}
+                />
+            </div>
         </div>
+
     );
 }
 

@@ -13,7 +13,7 @@ export default function MainNavBar() {
         <Button text="Lore" href="/Lore"/>
         <Button text="Skill Trees" href="/Skill-Tree"/>
         <Button text="Character Sheet" href="/DeadEndPage"/>
-        <Button text="Items" href="/DeadEndPage"/>
+        <Button text="Items" href="/Items"/>
         <Button text="Spells" href="/DeadEndPage"/>
         <Link href= "/"> <button type ="button"> Logout</button> </Link>
       </div>
