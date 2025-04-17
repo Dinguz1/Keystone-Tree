@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getAuthLevel } from "./lib/utils";
 
 const publicRoutes = ["/Auth"]
 
@@ -6,11 +7,11 @@ export default async function middleware(req: NextRequest) {
     const path = req.nextUrl.pathname
     const isPublicRoute = publicRoutes.includes(path)
     const searchParams = req.nextUrl.searchParams.get('Player-ID')
-    const idList = ["Guest1597!$", "692338DM","1235"]
-    const isAuthed = idList.includes(searchParams!)
 
     // Redirect to Auth page if there is no 'Player-ID' or if the ID doesn't match
-    if (!isPublicRoute && !isAuthed) {
+    const authLevel = getAuthLevel(searchParams)
+
+    if (!isPublicRoute && authLevel === -1) {
         return NextResponse.redirect(new URL('/Auth', req.url))
     }
 }
