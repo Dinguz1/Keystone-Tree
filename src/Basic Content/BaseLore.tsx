@@ -1,11 +1,8 @@
-import MainNavBar from "@/components/MainNavBar";
 import { Tooltip } from "@heroui/tooltip";
 
 export default function BaseLore() {
     return (
         <div>
-            {MainNavBar()}
-
             <h1>Base Lore</h1>
 
             <p>{"This is the basic lore page. It is the lore that any player ID will see. Some Lore bits like names " +
