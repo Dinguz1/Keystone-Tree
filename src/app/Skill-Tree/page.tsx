@@ -11,6 +11,7 @@ export default function SkillTreePage() {
                 <Button text="Mind" href="Skill-Tree/Mind"/>
                 <h5>These pages to not exist yet, you can use them to see the dead end page</h5>
                 <Button text="Body" href="/DeadEndPage"/>
+                <Button text="Arcane" href="/DeadEndPage"/>
                 <Button text="Divine" href="/DeadEndPage"/>
                 <Button text="Nature" href="/DeadEndPage"/>
             </div>
