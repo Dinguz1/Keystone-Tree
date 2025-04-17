@@ -1,5 +1,5 @@
 'use client'
-import BaseRules from "@/Basic Content/BaseRules";
+import BaseRules from "@/content/basic/BaseRules";
 
 export default function Rules() {
     return <BaseRules />
