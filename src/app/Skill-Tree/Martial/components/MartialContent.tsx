@@ -59,7 +59,7 @@ const MartialContent = () => {
     
     return (
         <div className="dark-box">
-            <div className='h-screen w-screen max-h-screen flex items-center justify-center'>
+            <div className='h-[75vh] w-screen max-h-screen flex items-center justify-center'>
                 <ReactFlow 
                     nodes={skills} 
                     edges={initialEdges} 
