@@ -2,7 +2,8 @@ import { Tooltip } from "@heroui/tooltip";
 
 export default function BaseLore() {
     return (
-        <div>
+
+        <div className = "body w-[1200px]">
             <h1>Base Lore</h1>
 
             <p>{"This is the basic lore page. It is the lore that any player ID will see. Some Lore bits like names " +
@@ -12,5 +13,6 @@ export default function BaseLore() {
             </p>
             
         </div>
+
     )
 }

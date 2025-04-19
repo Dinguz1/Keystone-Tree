@@ -130,19 +130,17 @@ body {
     gap: 1rem;
     min-height: 100vh;
     padding: 1rem;
-    max-width: 1200px;
     margin: 0 auto;
+    align-items: center;
 }
 
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
 .header-text {
   display: flex;
-  align-items: center;
   gap: 0.5rem;
 }
 
@@ -236,7 +234,7 @@ h5,
 h6,
 button {
     font-family: "Grenze", serif;
-    width: fit-content;
+    width: 100%;
     margin: 10px;
 }
 
@@ -271,6 +269,7 @@ h6 {
 }
 
 p {
+
     text-indent: 60px;
     display: block;
     width: fit-content;
@@ -763,7 +762,6 @@ details[open] summary {
 
     h1 {
         font-size: 2.25rem;
-        justify-self: center;
         line-height: 2.5rem;
     }
 
