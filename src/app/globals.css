@@ -214,6 +214,10 @@ form input {
 
 }
 
+.stan-width{
+    width: 100%;
+    max-width: 1200px;
+}
 
 /* Special */
 .text-gradient {
@@ -223,7 +227,6 @@ form input {
     background-size: 100%;
     -webkit-box-decoration-break: clone;
 }
-
 
 /* Typography */
 h1,
@@ -269,7 +272,6 @@ h6 {
 }
 
 p {
-
     text-indent: 60px;
     display: block;
     width: fit-content;
@@ -752,7 +754,6 @@ details[open] summary {
     transform: none;
     opacity: 0.6;
 }
-
 
 @media (min-width: 640px) {
     body {
