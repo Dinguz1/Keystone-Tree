@@ -7,7 +7,7 @@ export default function MainNavBar() {
   const pathname = usePathname();
   if (pathname !== "/Auth"){
     return(
-        <div className="flex items-center justify-center">
+      <div className = "body w-[100%] max-w-[1200px] text-center">
         <Button text="Home" href="/"/>
         <Button text="Rules" href="/Rules"/>
         <Button text="Lore" href="/Lore"/>

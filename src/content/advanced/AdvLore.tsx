@@ -2,7 +2,7 @@ import { Tooltip } from "@heroui/tooltip";
 
 export default function AdvLore() {
     return (
-        <div>
+        <div className = "body w-[100%] max-w-[1200px]">
             <h1>GM Lore</h1>
 
             <p>{"This is the GM lore page. It is the lore that only the GM will see. Some Lore bits like names " +
