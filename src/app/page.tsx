@@ -4,7 +4,7 @@
 
 export default function Home() {
     return (
-      <main className = "stan-width">
+      <main className = "stan-width text-base/8">
         <h1 className="text-gradient text-center">Keystone Home Page</h1>
         <h1 className="header">{"What is Project Keystone"}</h1>
         <hr className="break"></hr>
