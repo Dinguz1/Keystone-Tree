@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getAuthLevel } from "./lib/utils";
 
-const publicRoutes = ["/Auth"]
+const publicRoutes = ["/auth"]
 
 export default async function middleware(req: NextRequest) {
     const path = req.nextUrl.pathname
@@ -12,7 +12,7 @@ export default async function middleware(req: NextRequest) {
     const authLevel = getAuthLevel(searchParams)
 
     if (!isPublicRoute && authLevel === -1) {
-        return NextResponse.redirect(new URL('/Auth', req.url))
+        return NextResponse.redirect(new URL('/auth', req.url))
     }
 }
 

@@ -9,12 +9,12 @@ export default function MainNavBar() {
     return(
       <div className = "stan-width text-center">
         <Button text="Home" href="/"/>
-        <Button text="Rules" href="/Rules"/>
-        <Button text="Lore" href="/Lore"/>
-        <Button text="Skill Trees" href="/Skill-Tree"/>
-        <Button text="Character Sheet" href="/DeadEndPage"/>
-        <Button text="Items" href="/Items"/>
-        <Button text="Spells" href="/DeadEndPage"/>
+        <Button text="Rules" href="/rules"/>
+        <Button text="Lore" href="/lore"/>
+        <Button text="Skill Trees" href="/skill-tree"/>
+        <Button text="Character Sheet" href="/dead-end"/>
+        <Button text="Items" href="/equipment/items"/>
+        <Button text="Spells" href="/character-creation/spells"/>
         <Link href= "/"> <button type ="button"> Logout</button> </Link>
       </div>
     )
