@@ -1,6 +1,6 @@
 'use client'
 import SkillNode from '@/components/SkillNode';
-import { ReactFlow, Node, Edge } from '@xyflow/react'
+import { ReactFlow, Node, Edge, Panel } from '@xyflow/react'
 
 import '@xyflow/react/dist/style.css';
 
@@ -65,7 +65,9 @@ const MartialContent = () => {
                     edges={initialEdges} 
                     nodeTypes={nodeTypes}
                     fitView={true}
-                />
+                >
+                    <Panel position='top-left'>Martial Tree</Panel>
+                </ReactFlow>
             </div>
         </div>
 
