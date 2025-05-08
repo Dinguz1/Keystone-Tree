@@ -7,7 +7,8 @@ import { useSearchParams } from "next/navigation";
 function TreeNode ({ data }: NodeProps) {
     const searchParams = useSearchParams()
     const id = searchParams.get('Player-ID')
-    const route = `/Skill-Tree/${data.text}?Player-ID=${id}`
+    const tree = (data.text as string).toLowerCase()
+    const route = `/skill-tree/${tree}?Player-ID=${id}`
     
     return (
         <>
