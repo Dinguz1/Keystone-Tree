@@ -34,7 +34,7 @@ export default function MainNavBar() {
       txt: 'Character Creation',
       links: [
         { txt: 'Races', href: '/character/races' },
-        { txt: 'Skill Trees', href: '/skill-tree' },
+        { txt: 'Skill Trees', href: '/skill-trees' },
         { txt: 'Character Sheet', href: '/character/sheet' }
       ]
     },
