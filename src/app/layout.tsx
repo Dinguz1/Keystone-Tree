@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Suspense } from "react";
-import MainNavBar from "@/components/MainNavBar";
+import Navbar from "@/components/Navbar";
 import { Providers } from "@/lib/providers";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
       <html lang="en">
         <body>
           <Providers>
-            <MainNavBar />
+            <Navbar />
             {children}
           </Providers>
         </body>
