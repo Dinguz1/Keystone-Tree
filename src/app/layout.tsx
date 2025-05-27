@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
-import { Providers } from "@/lib/providers";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Project Keystone",
@@ -17,11 +17,12 @@ export default function RootLayout({
   return (
     <Suspense>
       <html lang="en">
-        <body>
-          <Providers>
+        <body className="bg-(--background-primary) text-(--color-primary) flex flex-col gap-2 min-h-screen items-center">
+          <main className="min-h-screen flex flex-col justify-between">
             <Navbar />
             {children}
-          </Providers>
+            <Footer />
+          </main>
         </body>
       </html>
     </Suspense>
