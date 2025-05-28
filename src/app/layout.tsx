@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <Suspense>
       <html lang="en">
-        <body className="bg-(--background-primary) text-(--color-primary) flex flex-col gap-2 min-h-screen items-center">
+        <body className="bg-(--bg-primary) text-(--color-primary) flex flex-col gap-2 min-h-screen items-center">
           <main className="min-h-screen flex flex-col justify-between">
             <Navbar />
             {children}
