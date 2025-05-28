@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAuthLevel } from "./lib/utils";
+import { getAuthLevel } from "./lib/auth";
 import { type RequestCookie } from "next/dist/compiled/@edge-runtime/cookies";
 
 const publicRoutes = ['/auth', '/api/auth/login']
