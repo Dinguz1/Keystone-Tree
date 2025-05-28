@@ -4,7 +4,7 @@
 
 export default function Home() {
     return (
-      <main className = "stan-width text-base/8">
+      <div className = "w-full text-base/8">
         <h1 className="text-gradient text-center">Keystone Home Page</h1>
         <h1 className="header">{"What is Project Keystone"}</h1>
         <hr className="break"></hr>
@@ -26,7 +26,7 @@ export default function Home() {
           "incoming damage rather than relying on HP bloat. As well as to give players  the opportunity to build highly unique customized " +
           "characters that may or may not follow traditional archetypal builds."}
         </p>
-      </main>
+      </div>
     );
 }
 
