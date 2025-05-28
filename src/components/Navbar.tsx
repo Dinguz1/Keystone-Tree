@@ -1,7 +1,8 @@
 'use client'
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@heroui/dropdown";
+import useWindowDimensions from "@/lib/hooks/useWIndowDimension";
+import MobileNavbar from "./MobileNavbar";
+import DesktopNavbar from "./DesktopNavbar";
 
 export default function MainNavBar() {
   const pathname = usePathname();
@@ -49,29 +50,15 @@ export default function MainNavBar() {
     }
   ]
 
+  const { width } = useWindowDimensions()
+
   if (pathname !== "/auth"){
     return(
-      <div className="stan-width text-center">
-        {routes.map(({ txt, href, links }, key) => (
-          <Dropdown key={key} backdrop="blur" >
-            <DropdownTrigger>
-              {href === undefined ? (
-                <button>{txt}</button>
-              ) : (
-                <Link href={href}>
-                  <button>{txt}</button>
-                </Link>
-              )}
-            </DropdownTrigger>
-            <DropdownMenu variant='solid' emptyContent="" color='primary' disableAnimation={true} className="dark-box">
-              {links.map(({ txt: linkTxt, href: linkHref }, key) => (
-                <DropdownItem key={key} href={linkHref} color='primary' >{linkTxt}</DropdownItem>
-              ))}
-            </DropdownMenu>
-          </Dropdown>
-        ))}
-        <Link href= "/"> <button type ="button"> Logout</button> </Link>
-      </div>
+        width && width < 728 ? (
+          <MobileNavbar routes={routes} />
+        ) : (
+          <DesktopNavbar routes={routes} />
+        )
     )
   }
 }
