@@ -1,10 +1,9 @@
 import { Route } from "@/lib/types";
-import { NavigationMenuList, NavigationMenu, NavigationMenuTrigger } from "@radix-ui/react-navigation-menu";
 import { Sheet, SheetTrigger, SheetContent } from "./ui/sheet";
 import { Button } from "./ui/button";
 import { ChevronDown, Menu } from "lucide-react";
 import Link from "next/link";
-import { NavigationMenuContent, NavigationMenuItem } from "./ui/navigation-menu";
+import { NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenu, NavigationMenuTrigger } from "@radix-ui/react-navigation-menu";
 
 type Props = {
     routes: Route[]
@@ -12,7 +11,7 @@ type Props = {
 
 const MobileNavbar = ({ routes }: Props) => {
     return (
-        <NavigationMenu className="flex justify-between mb-12 text-lg">
+        <NavigationMenu className="flex justify-between mb-12 text-lg max-w-full" orientation="vertical">
             <NavigationMenuItem className="flex items-center">
                 Keystone TTRPG
             </NavigationMenuItem>
@@ -24,28 +23,28 @@ const MobileNavbar = ({ routes }: Props) => {
                             <Menu color="#f3ede2" strokeWidth={3} className="!w-[24px] !h-[24px]" />
                         </Button>
                     </SheetTrigger>
-                    <SheetContent className="bg-(--bg-primary) border-(--bg-primary)">
+                    <SheetContent className="bg-(--bg-primary) border-(--bg-primary) flex max-w-full">
                         <NavigationMenuList className="text-lg flex flex-col gap-3 py-6">
                             {routes.map(({ txt, href, links }, key) => (
-                                <NavigationMenuItem key={key}>
+                                <NavigationMenuItem key={key} className="w-full pl-4">
                                     {links.length > 0 ? (
-                                        <>
-                                            <NavigationMenuTrigger className="flex items-center gap-1 cursor-pointer">
+                                        <div className="pl-0">
+                                            <NavigationMenuTrigger className="flex items-center gap-0 cursor-pointer text-lg">
                                                 {txt}
-                                                <ChevronDown strokeWidth={3}/>
+                                                <ChevronDown strokeWidth={3} />
                                             </NavigationMenuTrigger>
-                                            <NavigationMenuContent>
-                                                <ul className="flex flex-col gap-1">
+                                            <NavigationMenuContent className="max-w-full">
+                                                <ul className="flex flex-col gap-1 pl-2">
                                                     {links.map((link, linkKey) => (
-                                                        <li key={linkKey}>
-                                                            <Link href={link.href}>
+                                                        <li key={linkKey} className="flex max-w-full">
+                                                            <Link href={link.href} className="w-full">
                                                                 {link.txt}
                                                             </Link>
                                                         </li>
                                                     ))}
                                                 </ul>
                                             </NavigationMenuContent>    
-                                        </>
+                                        </div>
                                     ) : (
                                         <Link href={href!}>{txt}</Link>
                                     )}
