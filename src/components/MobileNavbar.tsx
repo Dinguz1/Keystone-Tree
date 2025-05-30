@@ -11,7 +11,7 @@ type Props = {
 
 const MobileNavbar = ({ routes }: Props) => {
     return (
-        <NavigationMenu className="flex justify-between mb-12 text-lg max-w-full" orientation="vertical">
+        <NavigationMenu className="flex justify-between mb-12 text-lg max-w-full p-8" orientation="vertical">
             <NavigationMenuItem className="flex items-center">
                 Keystone TTRPG
             </NavigationMenuItem>
@@ -31,7 +31,6 @@ const MobileNavbar = ({ routes }: Props) => {
                                         <div className="pl-0">
                                             <NavigationMenuTrigger className="flex items-center gap-0 cursor-pointer text-lg">
                                                 {txt}
-                                                <ChevronDown strokeWidth={3} />
                                             </NavigationMenuTrigger>
                                             <NavigationMenuContent className="max-w-full">
                                                 <ul className="flex flex-col gap-1 pl-2">
