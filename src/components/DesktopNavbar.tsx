@@ -9,7 +9,7 @@ type Props = {
 
 const DesktopNavbar = ({ routes }: Props) => {
     return (
-        <NavigationMenu className="flex max-w-full justify-between mb-12 text-base relative flex-none xl:mb-8 bg-(--bg-secondary) p-8 xl:p-12">
+        <NavigationMenu className="flex max-w-full justify-between text-base relative flex-none bg-(--bg-secondary) p-6 xl:p-6 md:p-4">
             <NavigationMenuItem className="lg:text-lg">
                 Keystone TTRPG
             </NavigationMenuItem>
