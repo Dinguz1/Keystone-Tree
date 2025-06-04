@@ -11,7 +11,7 @@ type Props = {
 
 const MobileNavbar = ({ routes }: Props) => {
     return (
-        <NavigationMenu className="flex justify-between mb-12 text-lg max-w-full p-8" orientation="vertical">
+        <NavigationMenu className="flex justify-between text-lg max-w-full p-8" orientation="vertical">
             <NavigationMenuItem className="flex items-center">
                 Keystone TTRPG
             </NavigationMenuItem>
