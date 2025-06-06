@@ -9,3 +9,9 @@ export type Route = {
         href: string
     }[]
 }
+
+export type HomeCard = {
+    image: string,
+    title: string,
+    content: string
+}
