@@ -30,6 +30,14 @@ export default function Home() {
     }
   ]
 
+  let quality: number = 40
+  if (width !== undefined && width >= 1024) {
+    quality = 60
+  } else if (width !== undefined && width >= 1536) {
+    quality = 80
+  }
+  
+
   return (
       <div className="relative flex flex-col gap-12">
         <div className="relative md:-mx-8 md:-my-12">
@@ -40,7 +48,7 @@ export default function Home() {
             alt="" 
             className="block absolute w-inherit h-inherit"  
           />
-          <div className="flex flex-col gap-2 h-full md:absolute top-0 left-0 md:p-8 lg:justify-center">
+          <div className="flex flex-col gap-2 h-full md:absolute top-0 left-0 md:p-8 lg:justify-center xl:w-3/4">
             <h3 className="text-2xl">Forge Your Story</h3>
             <p className="md:w-3/4">
               Step into a world shaped by your choices, not your class. Keystone is a tabletop RPG built for deep storytelling, tactical decision-making, and rich character growth.
@@ -83,15 +91,15 @@ export default function Home() {
             </ul>
           </section>
         </div>
-        <div className="flex flex-col gap-6 md:grid grid-cols-2">
-          <h4 className="text-xl text-(--bg-accent) col-span-2">Core Game Concepts</h4>
+        <div className="flex flex-col gap-6 md:grid grid-cols-2 xl:grid-cols-4">
+          <h4 className="text-xl text-(--bg-accent) col-span-4 xl:text-center">Core Game Concepts</h4>
           {homeCards.map(({ image, title, content }, key) => (
-            <Card key={key} className="flex flex-col relative p-0 rounded-none border-none bg-(--bg-secondary) pb-6 shadow-xl">
-              <CardHeader className="flex flex-col h-50 p-0 items-center">
-                <Image src={image} alt='' fill={true} objectFit="cover" quality={40} />
-                <CardTitle className="text-lg my-2">{title}</CardTitle>
+            <Card key={key} className="flex flex-col relative p-0 rounded-none border-none bg-(--bg-secondary) pb-6 shadow-xl lg:justify-between">
+              <CardHeader className="flex flex-col h-50 p-0 items-center lg:h-auto">
+                <Image src={image} alt='' fill={true} objectFit="cover" quality={quality} />
+                <CardTitle className="text-lg my-2 xl:text-center xl:my-0">{title}</CardTitle>
               </CardHeader>
-              <CardContent className="px-2">
+              <CardContent className="px-2 lg:px-6">
                 <p className="text-center">{content}</p>
               </CardContent>
             </Card>
