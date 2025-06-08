@@ -40,7 +40,7 @@ export default function Home() {
             alt="" 
             className="block absolute w-inherit h-inherit"  
           />
-          <div className="flex flex-col gap-2 h-full md:absolute top-0 left-0 md:p-8">
+          <div className="flex flex-col gap-2 h-full md:absolute top-0 left-0 md:p-8 lg:justify-center">
             <h3 className="text-2xl">Forge Your Story</h3>
             <p className="md:w-3/4">
               Step into a world shaped by your choices, not your class. Keystone is a tabletop RPG built for deep storytelling, tactical decision-making, and rich character growth.
@@ -51,7 +51,7 @@ export default function Home() {
             <button className="bg-(--bg-accent) text-base px-3 py-2 w-fit cursor-pointer my-4">Start Building</button>
           </div>
         </div>
-        <div className="flex flex-col bg-(--bg-tertiary) text-(--bg-primary) -mx-8 p-8 gap-8 shadow-xl md:align-center md:px-18">
+        <div className="flex flex-col bg-(--bg-tertiary) text-(--bg-primary) -mx-8 p-8 gap-8 shadow-xl md:align-center md:px-18 lg:flex-row lg:px-8">
           <section className="md:text-left md:w-[85%]">
             <h4 className="text-xl">Goal of the System</h4>
             <p>
@@ -70,10 +70,11 @@ export default function Home() {
               Whether you're unraveling ancient mysteries, navigating political intrigue, or forging personal arcs, the system adapts to your group's unique style and goals.
             </p>
           </section>
+          <div className={width! >= 1024 ? 'divider' : 'hidden'} />
           <section className="md:text-left md:w-[85%]">
             <h4 className="text-xl text-left w-70 md:w-full">Get Started With the Play-Test</h4>
             <p>Download the free rule book and character sheets</p>
-            <ul className="text-base p-4 flex flex-col gap-2 md:text-left">
+            <ul className="text-base p-4 flex flex-col gap-2 md:text-left lg:px-8">
               <li className="styled-list">Create a party using our flexible, classless system.</li>
               <li className="styled-list">Try out EP/WP and AP-based combat in your next session</li>
               <li className="styled-list">Share your feedback and help shape the final release</li>
