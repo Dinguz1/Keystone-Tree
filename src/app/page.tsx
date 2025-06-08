@@ -1,29 +1,11 @@
 'use client'
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import useWindowDimensions from "@/lib/hooks/useWIndowDimension"
 import { HomeCard } from "@/lib/types"
-import Image, { getImageProps } from "next/image"
-
-// https://nextjs.org/docs/pages/api-reference/components/image#background-css
-const getBackgroundImage = (srcSet = '') => {
-  const imageSet = srcSet
-    .split(', ')
-    .map((str) => {
-      const [url, dpi] = str.split(' ')
-      return `url("${url}") ${dpi}`
-    })
-    .join(', ')
-    return `image-set(${imageSet})`
-}
+import Image from "next/image"
 
 export default function Home() {
-  const { props: { srcSet } } = getImageProps({ alt: '', width: 128, height: 128, src: '/home-hero.png' })
-  
   const { width } = useWindowDimensions()
-  const backgroundImage = getBackgroundImage(srcSet)
-  // Disable the hero image at viewports smaller than the tailwindcss 'md' breakpoint
-  const style = { width: '100%', backgroundImage: width! > 768 ? backgroundImage : 'none' }
 
   const homeCards: HomeCard[] = [
     {
@@ -50,14 +32,27 @@ export default function Home() {
 
   return (
       <div className="relative flex flex-col gap-12">
-        <div style={style} className="bg-no-repeat bg-contain flex flex-col gap-3">
-          <h3 className="text-2xl">Forge Your Story</h3>
-          <p>Step into a world shaped by your choices, not your class. Keystone is a tabletop RPG built for deep storytelling, tactical decision-making, and rich character growth.</p> 
-          <p>Whether you&apos;re a seasoned GM or a new player, your journey starts here.</p>
-          <button className="bg-(--bg-accent) text-base px-3 py-2 w-fit cursor-pointer">Start Building</button>
+        <div className="relative md:-mx-8 md:-my-12">
+          <Image
+            src={width! >= 768 ? "/home-hero.png" : ''} 
+            fill={true} 
+            objectFit="cover" 
+            alt="" 
+            className="block absolute w-inherit h-inherit"  
+          />
+          <div className="flex flex-col gap-2 h-full md:absolute top-0 left-0 md:p-8">
+            <h3 className="text-2xl">Forge Your Story</h3>
+            <p className="md:w-3/4">
+              Step into a world shaped by your choices, not your class. Keystone is a tabletop RPG built for deep storytelling, tactical decision-making, and rich character growth.
+            </p> 
+            <p>
+              Whether you&apos;re a seasoned GM or a new player, your journey starts here.
+            </p>
+            <button className="bg-(--bg-accent) text-base px-3 py-2 w-fit cursor-pointer my-4">Start Building</button>
+          </div>
         </div>
-        <div className="flex flex-col bg-(--bg-tertiary) text-(--bg-primary) -mx-8 p-8 gap-8 shadow-xl">
-          <section className="">
+        <div className="flex flex-col bg-(--bg-tertiary) text-(--bg-primary) -mx-8 p-8 gap-8 shadow-xl md:align-center md:px-18">
+          <section className="md:text-left md:w-[85%]">
             <h4 className="text-xl">Goal of the System</h4>
             <p>
               Keystone is built to empower players and game masters to tell character-driven stories within a flexible, tactical framework.
@@ -75,10 +70,10 @@ export default function Home() {
               Whether you're unraveling ancient mysteries, navigating political intrigue, or forging personal arcs, the system adapts to your group's unique style and goals.
             </p>
           </section>
-          <section>
-            <h4 className="text-xl text-left w-70">Get Started With the Play-Test</h4>
+          <section className="md:text-left md:w-[85%]">
+            <h4 className="text-xl text-left w-70 md:w-full">Get Started With the Play-Test</h4>
             <p>Download the free rule book and character sheets</p>
-            <ul className="text-base p-4 flex flex-col gap-2">
+            <ul className="text-base p-4 flex flex-col gap-2 md:text-left">
               <li className="styled-list">Create a party using our flexible, classless system.</li>
               <li className="styled-list">Try out EP/WP and AP-based combat in your next session</li>
               <li className="styled-list">Share your feedback and help shape the final release</li>
@@ -87,8 +82,8 @@ export default function Home() {
             </ul>
           </section>
         </div>
-        <div className="flex flex-col gap-6">
-          <h4 className="text-xl text-(--bg-accent)">Core Game Concepts</h4>
+        <div className="flex flex-col gap-6 md:grid grid-cols-2">
+          <h4 className="text-xl text-(--bg-accent) col-span-2">Core Game Concepts</h4>
           {homeCards.map(({ image, title, content }, key) => (
             <Card key={key} className="flex flex-col relative p-0 rounded-none border-none bg-(--bg-secondary) pb-6 shadow-xl">
               <CardHeader className="flex flex-col h-50 p-0 items-center">
