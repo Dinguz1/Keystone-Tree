@@ -79,10 +79,10 @@ export default function Home() {
             </p>
           </section>
           <div className={width! >= 1024 ? 'divider' : 'hidden'} />
-          <section className="md:text-left md:w-[85%]">
-            <h4 className="text-xl text-left w-70 md:w-full">Get Started With the Play-Test</h4>
+          <section className="md:text-left md:w-[85%] 2xl:text-center">
+            <h4 className="text-xl w-70 md:w-full">Get Started With the Play-Test</h4>
             <p>Download the free rule book and character sheets</p>
-            <ul className="text-base p-4 flex flex-col gap-2 md:text-left lg:px-8">
+            <ul className="text-base p-4 flex flex-col gap-2 md:text-left lg:px-8 2xl:text-center">
               <li className="styled-list">Create a party using our flexible, classless system.</li>
               <li className="styled-list">Try out EP/WP and AP-based combat in your next session</li>
               <li className="styled-list">Share your feedback and help shape the final release</li>
