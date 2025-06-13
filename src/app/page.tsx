@@ -79,10 +79,10 @@ export default function Home() {
             </p>
           </section>
           <div className={width! >= 1024 ? 'divider' : 'hidden'} />
-          <section className="md:text-left md:w-[85%] 2xl:text-center">
+          <section className="md:text-left md:w-[85%] lg:text-center">
             <h4 className="text-xl w-70 md:w-full">Get Started With the Play-Test</h4>
             <p>Download the free rule book and character sheets</p>
-            <ul className="text-base p-4 flex flex-col gap-2 md:text-left lg:px-8 2xl:text-center">
+            <ul className="text-base p-4 flex flex-col gap-2 md:text-left lg:px-4">
               <li className="styled-list">Create a party using our flexible, classless system.</li>
               <li className="styled-list">Try out EP/WP and AP-based combat in your next session</li>
               <li className="styled-list">Share your feedback and help shape the final release</li>
@@ -92,9 +92,9 @@ export default function Home() {
           </section>
         </div>
         <div className="flex flex-col gap-6 md:grid grid-cols-2 xl:grid-cols-4">
-          <h4 className="text-xl text-(--bg-accent) col-span-4 xl:text-center">Core Game Concepts</h4>
+          <h4 className="text-xl text-(--bg-accent) col-span-full xl:text-center">Core Game Concepts</h4>
           {homeCards.map(({ image, title, content }, key) => (
-            <Card key={key} className="flex flex-col relative p-0 rounded-none border-none bg-(--bg-secondary) pb-6 shadow-xl lg:justify-between">
+            <Card key={key} className="flex flex-col relative p-0 rounded-none border-none bg-(--bg-secondary) pb-6 shadow-xl lg:justify-between max-h-fit">
               <CardHeader className="flex flex-col h-50 p-0 items-center lg:h-auto">
                 <Image src={image} alt='' fill={true} objectFit="cover" quality={quality} />
                 <CardTitle className="text-lg my-2 xl:text-center xl:my-0">{title}</CardTitle>
