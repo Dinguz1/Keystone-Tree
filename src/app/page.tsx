@@ -44,9 +44,9 @@ export default function Home() {
           <Image
             src={width! >= 768 ? "/home-hero.png" : ''} 
             fill={true} 
-            objectFit="cover" 
+            objectFit="cover"
             alt="" 
-            className="block absolute w-inherit h-inherit"  
+            className="block absolute w-inherit h-inherit 2xl:max-h-[65vh]"  
           />
           <div className="flex flex-col gap-2 h-full md:absolute top-0 left-0 md:p-8 lg:justify-center xl:w-3/4">
             <h3 className="text-2xl">Forge Your Story</h3>
@@ -59,7 +59,7 @@ export default function Home() {
             <button className="bg-(--bg-accent) text-base px-3 py-2 w-fit cursor-pointer my-4">Start Building</button>
           </div>
         </div>
-        <div className="flex flex-col bg-(--bg-tertiary) text-(--bg-primary) -mx-8 p-8 gap-8 shadow-xl md:align-center md:px-18 lg:flex-row lg:px-8">
+        <div className="flex flex-col bg-(--bg-tertiary) text-(--bg-primary) -mx-8 p-8 gap-8 shadow-xl md:align-center md:px-18 lg:flex-row lg:px-8 2xl:py-12">
           <section className="md:text-left md:w-[85%]">
             <h4 className="text-xl">Goal of the System</h4>
             <p>
@@ -82,7 +82,7 @@ export default function Home() {
           <section className="md:text-left md:w-[85%] lg:text-center">
             <h4 className="text-xl w-70 md:w-full">Get Started With the Play-Test</h4>
             <p>Download the free rule book and character sheets</p>
-            <ul className="text-base p-4 flex flex-col gap-2 md:text-left lg:px-4">
+            <ul className="text-base p-4 flex flex-col gap-2 md:text-left lg:px-4 xl:text-center 2xl:pt-8">
               <li className="styled-list">Create a party using our flexible, classless system.</li>
               <li className="styled-list">Try out EP/WP and AP-based combat in your next session</li>
               <li className="styled-list">Share your feedback and help shape the final release</li>
