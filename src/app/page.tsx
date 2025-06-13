@@ -78,7 +78,7 @@ export default function Home() {
               Whether you're unraveling ancient mysteries, navigating political intrigue, or forging personal arcs, the system adapts to your group's unique style and goals.
             </p>
           </section>
-          <div className={width! >= 1024 ? 'divider' : 'hidden'} />
+          <div className="divider" />
           <section className="md:text-left md:w-[85%] lg:text-center">
             <h4 className="text-xl w-70 md:w-full">Get Started With the Play-Test</h4>
             <p>Download the free rule book and character sheets</p>
