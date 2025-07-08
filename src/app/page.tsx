@@ -42,11 +42,12 @@ export default function Home() {
       <div className="relative flex flex-col gap-12">
         <div className="relative md:-mx-8 md:-my-12">
           <Image
-            src={width! >= 768 ? "/home-hero.png" : ''} 
+            src="/home-hero.png" 
             fill={true} 
             objectFit="cover"
             alt="" 
-            className="block absolute w-inherit h-inherit 2xl:max-h-[65vh]"  
+            className="block absolute w-inherit h-inherit 2xl:max-h-[65vh]"
+            hidden={width! < 768}
           />
           <div className="flex flex-col gap-2 h-full md:absolute top-0 left-0 md:p-8 lg:justify-center xl:w-3/4">
             <h3 className="text-2xl">Forge Your Story</h3>
