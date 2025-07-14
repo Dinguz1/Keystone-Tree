@@ -15,11 +15,10 @@ const Footer = () => {
     }
 
     return (
-        <footer className="p-6 pt-0 bg-(--bg-secondary) flex flex-col">
+        <footer className="p-6 bg-(--bg-secondary) flex flex-col">
             <div className="footer-grid pb-14 border-b-(--bg-muted) border-b-1">
-                <div className="footer-section -mb-8">
-                    {/* <h4 className="text-lg md:text-base">Keystone TTRPG</h4> */}
-                    <div className="flex py-8">
+                <div className="footer-section">
+                    <div className="flex">
                         <Image src="/logo.svg" alt="Keyston TTRPG Logo" height={logoSize + 4} width={logoSize + 4} className=""/>
                     </div>
                 </div>
