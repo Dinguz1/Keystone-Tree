@@ -16,8 +16,8 @@ const Footer = () => {
 
     return (
         <footer className="p-6 bg-(--bg-secondary) flex flex-col">
-            <div className="footer-grid pb-14 border-b-(--bg-muted) border-b-1">
-                <div className="footer-section">
+            <div className="footer-grid pb-14 border-b-(--bg-muted) border-b-1 xl:pb-6">
+                <div className="footer-section md:col-span-full">
                     <div className="flex">
                         <Image src="/logo.svg" alt="Keyston TTRPG Logo" height={logoSize + 4} width={logoSize + 4} className=""/>
                     </div>
