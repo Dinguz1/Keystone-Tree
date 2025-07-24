@@ -15,10 +15,10 @@ const Footer = () => {
     }
 
     return (
-        <footer className="p-6 bg-(--bg-secondary) flex flex-col">
-            <div className="footer-grid pb-14 border-b-(--bg-muted) border-b-1 xl:pb-6">
-                <div className="footer-section md:col-span-full">
-                    <div className="flex">
+        <footer className="p-6 bg-(--bg-secondary) flex flex-col 2xl:px-12 2xl:pb-6">
+            <div className="footer-grid pb-14 border-b-(--bg-muted) border-b-1 xl:pb-6 2xl:mx-auto 2xl:w-[90%]">
+                <div className="footer-section md:col-span-full 2xl:col-span-1">
+                    <div className="flex 2xl:max-w-fit 2xl:w-100">
                         <Image src="/logo.svg" alt="Keyston TTRPG Logo" height={logoSize + 4} width={logoSize + 4} className=""/>
                     </div>
                 </div>
@@ -81,7 +81,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <p className="text-sm text-center !font-thin py-4">&copy; 2025 Project Keystone. All rights reserved.</p>
+            <p className="!text-sm text-center !font-thin py-4">&copy; 2025 Project Keystone. All rights reserved.</p>
         </footer>
     );
 }
