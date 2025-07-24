@@ -1,5 +1,5 @@
 'use client'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import ContentCard from "@/components/ContentCard"
 import useWindowDimensions from "@/lib/hooks/useWIndowDimension"
 import { HomeCard } from "@/lib/types"
 import Image from "next/image"
@@ -92,18 +92,15 @@ export default function Home() {
             </ul>
           </section>
         </div>
-        <div className="flex flex-col gap-6 md:grid grid-cols-2 xl:grid-cols-4">
-          <h4 className="text-xl text-(--bg-accent) col-span-full xl:text-center">Core Game Concepts</h4>
+        <div className="flex flex-col gap-6 md:grid grid-cols-2 xl:grid-cols-4 my-6">
+          <h4 className="font-semibold text-xl text-(--bg-compliment) col-span-full xl:text-center">Core Game Concepts</h4>
           {homeCards.map(({ image, title, content }, key) => (
-            <Card key={key} className="flex flex-col relative p-0 rounded-none border-none bg-(--bg-secondary) pb-6 shadow-xl lg:justify-between max-h-fit">
-              <CardHeader className="flex flex-col h-50 p-0 items-center lg:h-auto">
-                <Image src={image} alt='' fill={true} objectFit="cover" quality={quality} />
-                <CardTitle className="text-lg my-2 xl:text-center xl:my-0">{title}</CardTitle>
-              </CardHeader>
-              <CardContent className="px-2 lg:px-6">
-                <p className="text-center">{content}</p>
-              </CardContent>
-            </Card>
+            <ContentCard 
+              image={image} 
+              title={title} 
+              content={content} 
+              key={key} 
+            />
           ))}
         </div>
       </div>
