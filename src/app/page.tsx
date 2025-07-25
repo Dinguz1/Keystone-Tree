@@ -60,9 +60,9 @@ export default function Home() {
             <button className="bg-(--bg-accent) text-base px-3 py-2 w-fit cursor-pointer my-4">Start Building</button>
           </div>
         </div>
-        <div className="flex flex-col bg-(--bg-tertiary) text-(--bg-primary) -mx-8 p-8 gap-8 shadow-xl md:align-center md:px-18 lg:flex-row lg:px-8 2xl:py-12">
+        <div className="flex flex-col bg-(--bg-tertiary) text-(--bg-primary) -mx-8 p-6 py-8 gap-8 shadow-xl">
           <section className="md:text-left md:w-[85%]">
-            <h4 className="text-xl">Goal of the System</h4>
+            <h5 className="text-lg font-medium">Goal of the System</h5>
             <p>
               Keystone is built to empower players and game masters to tell character-driven stories within a flexible, tactical framework.
             </p>
@@ -81,9 +81,9 @@ export default function Home() {
           </section>
           <div className="divider" />
           <section className="md:text-left md:w-[85%] lg:text-center">
-            <h4 className="text-xl w-70 md:w-full">Get Started With the Play-Test</h4>
+            <h5 className="text-lg font-medium">Get Started With the Play-Test</h5>
             <p>Download the free rule book and character sheets</p>
-            <ul className="text-base p-4 flex flex-col gap-2 md:text-left lg:px-4 xl:text-center 2xl:pt-8">
+            <ul className="flex flex-col gap-2 py-4">
               <li className="styled-list">Create a party using our flexible, classless system.</li>
               <li className="styled-list">Try out EP/WP and AP-based combat in your next session</li>
               <li className="styled-list">Share your feedback and help shape the final release</li>
