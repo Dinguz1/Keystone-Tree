@@ -60,8 +60,8 @@ export default function Home() {
             <button className="bg-(--bg-accent) text-base px-3 py-2 w-fit cursor-pointer my-4">Start Building</button>
           </div>
         </div>
-        <div className="flex flex-col bg-(--bg-tertiary) text-(--bg-primary) -mx-8 p-6 py-8 gap-8 shadow-xl">
-          <section className="md:text-left md:w-[85%]">
+        <div className="grid grid-cols-1 bg-(--bg-tertiary) text-(--bg-primary) -mx-8 p-6 py-8 gap-8 shadow-xl md:p-8 lg:grid-cols-2 lg:gap-0">
+          <section className="lg:border-r-[1px] lg:border-(--bg-divider) lg:px-6 2xl:p-10">
             <h5 className="text-lg font-medium">Goal of the System</h5>
             <p>
               Keystone is built to empower players and game masters to tell character-driven stories within a flexible, tactical framework.
@@ -79,11 +79,11 @@ export default function Home() {
               Whether you're unraveling ancient mysteries, navigating political intrigue, or forging personal arcs, the system adapts to your group's unique style and goals.
             </p>
           </section>
-          <div className="divider" />
-          <section className="md:text-left md:w-[85%] lg:text-center">
-            <h5 className="text-lg font-medium">Get Started With the Play-Test</h5>
+          {/* <div className="divider" /> */}
+          <section className="lg:px-6 lg:text-center 2xl:p-10">
+            <h5 className="text-lg font-medium lg:text-center">Get Started With the Play-Test</h5>
             <p>Download the free rule book and character sheets</p>
-            <ul className="flex flex-col gap-2 py-4">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 py-4 lg:grid-cols-1">
               <li className="styled-list">Create a party using our flexible, classless system.</li>
               <li className="styled-list">Try out EP/WP and AP-based combat in your next session</li>
               <li className="styled-list">Share your feedback and help shape the final release</li>
@@ -92,7 +92,7 @@ export default function Home() {
             </ul>
           </section>
         </div>
-        <div className="flex flex-col gap-6 md:grid grid-cols-2 xl:grid-cols-4 my-6">
+        <div className="flex flex-col gap-6 md:grid grid-cols-2 xl:grid-cols-4 my-6 2xl:my-16">
           <h4 className="font-semibold text-xl text-(--bg-compliment) col-span-full xl:text-center">Core Game Concepts</h4>
           {homeCards.map(({ image, title, content }, key) => (
             <ContentCard 
