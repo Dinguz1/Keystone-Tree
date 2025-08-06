@@ -41,24 +41,28 @@ export default function Home() {
   return (
       <div className="relative flex flex-col gap-12">
         <div className="relative md:-mx-8 md:-my-12">
-          <Image
-            src="/home-hero.png" 
-            fill={true} 
-            objectFit="cover"
-            alt="" 
-            className="block absolute w-inherit h-inherit 2xl:max-h-[65vh]"
-            hidden={width! < 768}
-          />
-          <div className="flex flex-col gap-2 h-full md:absolute top-0 left-0 md:p-8 lg:justify-center xl:w-3/4">
-            <h3 className="text-2xl">Forge Your Story</h3>
-            <p className="md:w-3/4">
+          <div className="z-[-1]">
+            <Image 
+              priority 
+              src="/home-hero.png" 
+              fill={true}
+              objectFit="cover" 
+              objectPosition="center" 
+              alt="Hero Image"
+              className="!absolute"
+              hidden={width! < 768}
+            />
+          </div>
+          <section className="flex flex-col relative gap-2 md:p-6 md:w-3/5 lg:p-8 lg:w-2/5 xl:py-14 2xl:px-14 2xl:py-32">
+            <h3 className="text-2xl font-medium">Forge Your Story</h3>
+            <p className="">
               Step into a world shaped by your choices, not your class. Keystone is a tabletop RPG built for deep storytelling, tactical decision-making, and rich character growth.
             </p> 
             <p>
               Whether you&apos;re a seasoned GM or a new player, your journey starts here.
             </p>
-            <button className="bg-(--bg-accent) text-base px-3 py-2 w-fit cursor-pointer my-4">Start Building</button>
-          </div>
+            <button className="bg-(--bg-accent) font-medium px-3 py-2 w-fit cursor-pointer my-4 shadow-sm">Start Building</button>
+          </section>
         </div>
         <div className="grid grid-cols-1 bg-(--bg-tertiary) text-(--bg-primary) -mx-8 p-6 py-8 gap-8 shadow-xl md:p-8 lg:grid-cols-2 lg:gap-0">
           <section className="lg:border-r-[1px] lg:border-(--bg-divider) lg:px-6 2xl:p-10">
