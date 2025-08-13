@@ -1,18 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAuthLevel } from "./lib/utils";
+import { getAuthLevel } from "./lib/auth";
+import { type RequestCookie } from "next/dist/compiled/@edge-runtime/cookies";
 
-const publicRoutes = ["/Auth"]
+const publicRoutes = ['/auth', '/api/auth/login']
 
 export default async function middleware(req: NextRequest) {
     const path = req.nextUrl.pathname
     const isPublicRoute = publicRoutes.includes(path)
-    const searchParams = req.nextUrl.searchParams.get('Player-ID')
+
+    // Sets playerId to empty string if it doesnt exist in cookies
+    let playerId: RequestCookie | undefined | string = req.cookies.get('playerId')
+    playerId = (playerId === undefined) ? '' : playerId.value
 
     // Redirect to Auth page if there is no 'Player-ID' or if the ID doesn't match
-    const authLevel = getAuthLevel(searchParams)
+    const authLevel = getAuthLevel(playerId)
 
     if (!isPublicRoute && authLevel === -1) {
-        return NextResponse.redirect(new URL('/Auth', req.url))
+        return NextResponse.redirect(new URL('/auth', req.url))
     }
 }
 
