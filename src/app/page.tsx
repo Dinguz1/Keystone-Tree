@@ -51,6 +51,7 @@ export default function Home() {
               alt="Hero Image"
               className="!absolute"
               hidden={width! < 768}
+              quality={quality}
             />
           </div>
           <section className="flex flex-col relative gap-2 md:p-6 md:w-3/5 lg:p-8 lg:w-2/5 xl:py-14 2xl:px-14 2xl:py-32">
@@ -80,7 +81,7 @@ export default function Home() {
             </p>
             <br/>
             <p>
-              Whether you're unraveling ancient mysteries, navigating political intrigue, or forging personal arcs, the system adapts to your group's unique style and goals.
+              Whether yo&apos;re unraveling ancient mysteries, navigating political intrigue, or forging personal arcs, the system adapts to your group&apos;s unique style and goals.
             </p>
           </section>
           {/* <div className="divider" /> */}

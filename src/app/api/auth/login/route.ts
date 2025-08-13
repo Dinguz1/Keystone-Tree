@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 
-export async function POST (req: NextRequest, res: NextResponse) {
+
+export async function POST (req: NextRequest) {
     const { playerId } = await req.json()
     console.log('playerId', playerId)
     const cookieStore = await cookies()

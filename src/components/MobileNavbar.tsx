@@ -1,7 +1,7 @@
 import { Route } from "@/lib/types";
 import { Sheet, SheetTrigger, SheetContent } from "./ui/sheet";
 import { Button } from "./ui/button";
-import { ChevronDown, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import { NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenu, NavigationMenuTrigger } from "@radix-ui/react-navigation-menu";
 
