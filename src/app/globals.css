@@ -63,6 +63,7 @@
         --bg-compliment: #FF6F59;
         --bg-gradient: '';
         --bg-muted: #cdcdce48;
+        --bg-divider: #B6B2AA;
 
         /* Sizing 1 */
         /* 
@@ -249,58 +250,3 @@ p {
     }
 
 }
-
-/* :root {
-    --bg-primary: #121113;
-    --bg-secondary: #222725;
-    --bg-tertiary: #F3EDE2;
-    --bg-accent: #DB504A;
-    --bg-compliment: #FF6F59;
-    --bg-gradient: '';
-    --bg-muted: #f8fafc;
-
-    --color-primary: white;
-    --color-secondary: '';
-    --color-tertiary: '';
-    --color-accent: '';
-    --color-compliment: '';
-    --color-gradient: '';
-    --color-muted: ;
-    --color-link: #60a5fa;
-    --color-link-transparent: rgba(37, 99, 235, 0.1);
-
-    --color-success: '';
-    --color-warning: '';
-    --color-error: '';
-    --color-info: '';
-    --color-highlight: #fef9c3;
-
-    --gradient-start: #9580ff;
-    --gradient-end: #80ffea;
-
-    --border-primary: #29325b;
-    --border-secondary: #323c71;
-    --border-highlight: #4649af;
-    --border-tertiary: '';
-
-    --shadow-dark: '';
-    --shadow-light: '';
-    --shadow-text: '';
-
-    --padding-small: 1rem;
-    --padding-large: 2rem;
-
-    --border-radius-small: 0.5rem;
-    --border-radius-large: 0.75rem;
-    --highlight-border-radius: 0.5rem;
-
-    --text-selection: '';
-
-    --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
-    --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
-    --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
-    --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
-    --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
-    --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
-    --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
-} */
